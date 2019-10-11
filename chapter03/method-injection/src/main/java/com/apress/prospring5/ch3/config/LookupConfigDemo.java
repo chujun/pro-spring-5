@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.util.StopWatch;
 
-import java.util.Arrays;
-
 /**
  * Created by iuliana.cosmina on 2/19/17.
  */
@@ -51,4 +49,13 @@ public class LookupConfigDemo {
 		stopWatch.stop();
 		System.out.println("100000 gets took " + stopWatch.getTotalTimeMillis() + " ms");
 	}
+	/**
+	 * execute result:
+	 * [abstractLookupBean]: Singer Instances the Same?  false
+	 * 100000 gets took 1004 ms
+	 * [standardLookupBean]: Singer Instances the Same?  true
+	 * 100000 gets took 1 ms
+	 *
+	 * Process finished with exit code 0
+	 */
 }
