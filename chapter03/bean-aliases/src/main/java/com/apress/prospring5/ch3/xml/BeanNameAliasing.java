@@ -29,6 +29,9 @@ public class BeanNameAliasing {
             System.out.println("There is only one String bean.");
         }
 
+        Map<String,Map> beans2 = ctx.getBeansOfType(Map.class);
+        System.out.println(beans2.size());
+
         ctx.close();
     }
 }
