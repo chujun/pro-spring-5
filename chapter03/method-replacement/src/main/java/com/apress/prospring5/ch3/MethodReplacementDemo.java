@@ -1,7 +1,7 @@
 package com.apress.prospring5.ch3;
 
 import org.springframework.context.support.GenericXmlApplicationContext;
-import org.springframework.util.StopWatch; 
+import org.springframework.util.StopWatch;
 
 public class MethodReplacementDemo {
     public static void main(String... args) {
@@ -18,6 +18,12 @@ public class MethodReplacementDemo {
         displayInfo(standardTarget);
 
         ctx.close();
+        /*
+        <h2>Thanks for playing, try again!</h2>
+        1000000 invocations took: 426 ms
+        <h1>Thanks for playing, try again!</h1>
+        1000000 invocations took: 43 ms
+         */
     }
 
     private static void displayInfo(ReplacementTarget target) {
@@ -36,5 +42,5 @@ public class MethodReplacementDemo {
 
         System.out.println("1000000 invocations took: "
                 + stopWatch.getTotalTimeMillis() + " ms");
-    } 
+    }
 }

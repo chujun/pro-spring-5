@@ -6,9 +6,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="methodReplacer" class="com.apress.prospring5.ch3.FormatMessageReplacer"/>
-    
+
+
     <bean id="replacementTarget" class="com.apress.prospring5.ch3.ReplacementTarget">
         <replaced-method name="formatMessage" replacer="methodReplacer">
+            <!--bean存在重载方法时，可指定参数-->
             <arg-type>String</arg-type>
         </replaced-method>
     </bean>
