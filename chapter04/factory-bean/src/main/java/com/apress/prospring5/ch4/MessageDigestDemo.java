@@ -10,6 +10,14 @@ public class MessageDigestDemo {
 
         MessageDigester digester = (MessageDigester) ctx.getBean("digester");
         digester.digest("Hello World!");
+        /*
+        Using digest1
+        Using alogrithm: SHA1
+        [B@441772e
+        Using digest2
+        Using alogrithm: MD5
+        [B@7334aada
+         */
         //MessageDigestFactoryBean messageDigestFactoryBean1 = (MessageDigestFactoryBean) ctx.getBean("messageDigestFactoryBean");
         //Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'messageDigestFactoryBean' available
 
