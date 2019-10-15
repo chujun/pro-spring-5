@@ -10,7 +10,11 @@ public class MessageDigestDemo {
 
         MessageDigester digester = (MessageDigester) ctx.getBean("digester");
         digester.digest("Hello World!");
+        //MessageDigestFactoryBean messageDigestFactoryBean1 = (MessageDigestFactoryBean) ctx.getBean("messageDigestFactoryBean");
+        //Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'messageDigestFactoryBean' available
 
+        //访问产生bean的factory bean: &beanName
+        MessageDigestFactoryBean messageDigestFactoryBean2 = (MessageDigestFactoryBean) ctx.getBean("&shaDigest");
         ctx.close();
     }
 }
