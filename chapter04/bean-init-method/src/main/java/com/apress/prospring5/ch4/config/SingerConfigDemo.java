@@ -33,7 +33,7 @@ public class SingerConfigDemo {
 			singerTwo.setAge(72);
 			return singerTwo;
 		}
-
+		//这儿的三个@Lazy注解也可以放到SingerConfig类上，@Lazy支持ElementType.TYPE
 		@Lazy
 		@Bean(initMethod = "init")
 		Singer singerThree() {
