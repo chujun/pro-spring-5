@@ -19,7 +19,7 @@ public class EnvironmentSampleFirst {
 
         Map<String,Object> appMap = new HashMap<>();
         appMap.put("user.home", "application_home");
-        //addLast
+        //addFirst
         propertySources.addFirst(new MapPropertySource("prospring5_MAP", appMap));
 
         System.out.println("user.home: " + System.getProperty("user.home"));
