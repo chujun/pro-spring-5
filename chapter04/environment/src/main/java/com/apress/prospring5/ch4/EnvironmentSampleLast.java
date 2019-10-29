@@ -1,12 +1,12 @@
 package com.apress.prospring5.ch4;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.core.env.MutablePropertySources;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class EnvironmentSampleLast {
 
@@ -19,7 +19,7 @@ public class EnvironmentSampleLast {
 
         Map<String,Object> appMap = new HashMap<>();
         appMap.put("application.home", "application_home");
-
+        //addLast
         propertySources.addLast(new MapPropertySource("prospring5_MAP", appMap));
 
         System.out.println("user.home: " + System.getProperty("user.home"));
